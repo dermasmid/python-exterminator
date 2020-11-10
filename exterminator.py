@@ -3,19 +3,19 @@ import traceback
 import sys
 from datetime import datetime
 
-
+__version__ = '0.7'
 
 class Exterminator:
 
 
-    def __init__(self, frames = None, callback = None, raise_error = True):
+    def __init__(self, frames: int = None, callback: callable = None, raise_error: bool = True):
 
         self.frames = frames
         self.callback = callback
         self.raise_error = raise_error
 
 
-    def exterminate(self, exception = None, traceback_obj = None):
+    def exterminate(self, exception: Exception = None, traceback_obj: 'traceback' = None):
         error_info = ''
         if not traceback_obj:
             traceback_obj = sys.exc_info()[2]
@@ -41,7 +41,7 @@ class Exterminator:
             local_vars = frame_obj.f_locals
             error_info += f'Frame number: {frame_number}\n\tFunction name:\n\t\t{name}\n\tFilename:\n\t\t{filename}\n\tLocal variables:\n\t\t{local_vars}\n\n'
         
-        error_info += '----------------------------------------------------------------------------------------------\n'
+        error_info += ('-' * 95) + '\n'
         if self.callback:
             self.callback(error_info)
         else:

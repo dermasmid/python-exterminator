@@ -9,9 +9,9 @@ You have two options.
 ### As a decorator
 
 ``` python
-import exterminator
+from exterminator import Exterminator
 
-@exterminator.Exterminator()
+@Exterminator()
 def main_function():
     # do stuff that might work
 
@@ -21,8 +21,8 @@ main_function()
 ### As a context manager
 
 ``` python
-import exterminator
+from exterminator import Exterminator
 
-with exterminator.Exterminator():
+with Exterminator():
     # do stuff, you know the thing
 ```
