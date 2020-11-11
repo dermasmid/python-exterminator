@@ -53,15 +53,11 @@ class Exterminator:
 
 
     def __call__(self, func):
-
-
         def wrapper(*args, **kwargs):
             try:
                 func(*args, **kwargs)
             except Exception as e:
                 self.exterminate(e)
-
-
         return wrapper
 
 
@@ -71,3 +67,7 @@ class Exterminator:
 
     def __exit__(self, exception_type, exception_value, traceback):
         self.exterminate(traceback_obj= traceback)
+
+
+    def globally(self):
+        sys.excepthook = lambda exception_type, exception_value, traceback: self.exterminate(traceback_obj= traceback)
