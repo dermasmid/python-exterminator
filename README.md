@@ -2,6 +2,12 @@
 
 Bugs are bad, but it's even worse when it happens in production, this is why it is a good idea to document all data possible when a exception occurs.
 
+## Installing
+
+``` bash
+pip3 install exterminator
+```
+
 ## Usage
 
 You have two options.
