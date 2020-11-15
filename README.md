@@ -10,7 +10,7 @@ pip3 install exterminator
 
 ## Usage
 
-You have two options.
+You have three options.
 
 ### As a decorator
 
