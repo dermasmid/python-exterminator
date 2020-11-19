@@ -4,7 +4,7 @@ import sys
 from datetime import datetime
 
 
-__version__ = '0.7'
+__version__ = '0.8'
 
 
 class Exterminator:
