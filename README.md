@@ -40,7 +40,7 @@ from exterminator import Exterminator
 
 Exterminator().globally()
 
-# that's it! now every exception that is not handled will be looged
+# that's it! now every exception that is not handled will be logged
 ```
 
 ## Important Note
@@ -57,5 +57,5 @@ def main_function():
 try:
     main_function()
 except:
-    # do some stuff of you own...
+    # do some stuff of your own...
 ```
